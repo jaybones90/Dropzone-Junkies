@@ -1,0 +1,13 @@
+<h3>{{blogPost.title}}</h3>
+
+{{#if isImageShowing}}
+  <p><img src={{blogPost.image}} alt="Skydiving Image" {{action 'hideImage'}}/></p>
+{{else}}
+  <button {{action 'showImage'}}>Show Image</button>
+{{/if}}
+
+<p>
+  {{blogPost.body}}
+</p>
+
+<h5>{{blogPost.author}}</h5>

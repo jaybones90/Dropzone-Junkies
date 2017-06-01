@@ -1,0 +1,15 @@
+<h1>Dropzone Junkies Blog</h1>
+
+It's like reddit but with skydiving
+
+<ul>
+  {{#each model as |blogPost|}}
+    {{post-tile blogPost=blogPost}}
+  {{/each}}
+</ul>
+
+{{#link-to 'index'}} Home {{/link-to}}
+<br><br>
+{{#link-to 'contact'}} Contact {{/link-to}}
+<br><br>
+{{#link-to 'about'}} About {{/link-to}}
