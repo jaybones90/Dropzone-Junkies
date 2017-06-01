@@ -1,0 +1,31 @@
+{{#if isBlogPostFormShowing}}
+  <div>
+    <form id="blog-form">
+
+      <div class="form-group">
+        <label for="title">Enter A Title For This Blog Post:</label>
+        {{input value=title id="title"}}
+      </div>
+
+      <div class="form-group">
+        <label for="author">Enter The Author For This Blog Post:</label>
+        {{input value=author id="author"}}
+      </div>
+
+      <div class="form-group">
+        <label for="body">Blog Post Body:</label><br>
+        {{textarea cols="60" rows="8" value=body id="body"}}
+      </div>
+
+      <div class="form-group">
+        <label for="image">Image URL:</label>
+        {{input value=image id="image"}}
+      </div>
+
+      <button {{action 'saveBlogPost'}}>Save</button>
+
+    </form>
+  </div>
+{{else}}
+  <button {{action 'showNewBlogPostForm'}}>Create New Blog Post</button>
+{{/if}}

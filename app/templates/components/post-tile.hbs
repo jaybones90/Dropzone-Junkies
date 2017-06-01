@@ -10,4 +10,6 @@
   {{blogPost.body}}
 </p>
 
-<h5>{{blogPost.author}}</h5>
+<h5>Author: {{blogPost.author}}</h5>
+{{update-blog-post blogPost=blogPost update="update"}}
+<button {{action 'delete' blogPost}}>Delete</button>

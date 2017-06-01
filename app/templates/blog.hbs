@@ -1,12 +1,19 @@
 <h1>Dropzone Junkies Blog</h1>
 
-It's like reddit but with skydiving
+<h3>It's like reddit but with skydiving</h3>
 
-<ul>
-  {{#each model as |blogPost|}}
-    {{post-tile blogPost=blogPost}}
-  {{/each}}
-</ul>
+
+{{new-blog-post saveBlogPost="saveBlogPost"}}
+
+
+
+  <ul>
+    {{#each model as |blogPost|}}
+      {{post-tile blogPost=blogPost deleteBlogPost="deleteBlogPost"}}
+    {{/each}}
+  </ul>
+
+
 
 {{#link-to 'index'}} Home {{/link-to}}
 <br><br>
