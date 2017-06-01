@@ -1,15 +1,22 @@
-<h3>{{blogPost.title}}</h3>
 
-{{#if isImageShowing}}
-  <p><img src={{blogPost.image}} alt="Skydiving Image" {{action 'hideImage'}}/></p>
-{{else}}
-  <button {{action 'showImage'}}>Show Image</button>
-{{/if}}
+<div class="row">
+  <div class="col-lg-6">
+    <div class="well">
+      <h3>{{blogPost.title}}</h3>
+      <h5>By: {{blogPost.author}}</h5>
+      
+      <div class="blog-link">
+        {{#link-to 'post' blogPost.id}} View This Blog Post {{/link-to}}
+      </div>
 
-<p>
-  {{blogPost.body}}
-</p>
+      <img class="thumbnail" src="{{blogPost.image}}" alt="Skydiving Thumbnail"/>
 
-<h5>Author: {{blogPost.author}}</h5>
-{{update-blog-post blogPost=blogPost update="update"}}
-<button {{action 'delete' blogPost}}>Delete</button>
+      <!-- {{#if isImageShowing}}
+      <p><img src={{blogPost.image}} alt="Skydiving Image" {{action 'hideImage'}}/></p>
+      {{else}}
+      <button class="show-image-button btn btn-primary" {{action 'showImage'}}>Show Image</button>
+      {{/if}} -->
+
+    </div>
+  </div>
+</div>

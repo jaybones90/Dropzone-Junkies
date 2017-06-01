@@ -23,10 +23,10 @@
         {{input value=image id="image"}}
       </div>
 
-      <button {{action 'update' blogPost}}>Save</button>
+      <button class="btn" {{action 'update' blogPost}}>Save</button>
 
     </form>
   </div>
 {{else}}
-  <button {{action 'showUpdateBlogPostForm'}}>Create New Blog Post</button>
+  <button {{action 'showUpdateBlogPostForm'}}>Update</button>
 {{/if}}

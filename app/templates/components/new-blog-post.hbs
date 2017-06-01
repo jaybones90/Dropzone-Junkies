@@ -1,4 +1,6 @@
-{{#if isBlogPostFormShowing}}
+
+<div class="center-page-text">
+  {{#if isBlogPostFormShowing}}
   <div>
     <form id="blog-form">
 
@@ -22,10 +24,11 @@
         {{input value=image id="image"}}
       </div>
 
-      <button {{action 'saveBlogPost'}}>Save</button>
+      <button class="btn" {{action 'saveBlogPost'}}>Save</button>
 
     </form>
   </div>
-{{else}}
-  <button {{action 'showNewBlogPostForm'}}>Create New Blog Post</button>
-{{/if}}
+  {{else}}
+  <button class="btn btn-primary" {{action 'showNewBlogPostForm'}}>Create New Blog Post</button>
+  {{/if}}
+</div>

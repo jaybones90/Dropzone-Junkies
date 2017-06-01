@@ -1,22 +1,16 @@
-<h1>Dropzone Junkies Blog</h1>
+<div class="center-page-text">
+  <h1>Dropzone Junkies Blog</h1>
 
-<h3>It's like reddit but with skydiving</h3>
+  <h3>It's like reddit but with skydiving</h3>
+
+</div>
 
 
 {{new-blog-post saveBlogPost="saveBlogPost"}}
-
-
+<br><br>
 
   <ul>
     {{#each model as |blogPost|}}
-      {{post-tile blogPost=blogPost deleteBlogPost="deleteBlogPost"}}
+      {{post-tile blogPost=blogPost}}
     {{/each}}
   </ul>
-
-
-
-{{#link-to 'index'}} Home {{/link-to}}
-<br><br>
-{{#link-to 'contact'}} Contact {{/link-to}}
-<br><br>
-{{#link-to 'about'}} About {{/link-to}}
